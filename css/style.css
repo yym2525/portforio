@@ -1,0 +1,251 @@
+/* ========================================
+  リセットCSS（必要に応じてress.cssも併用可）
+======================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-color: #fff;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+
+
+/* 背景テキスト（ローディング後も残す） */
+#background-text {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 10vw;
+  color: rgba(0, 0, 0, 0.05);
+  z-index: 0;
+  font-family: 'Montserrat', sans-serif;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+/* メインコンテンツ */
+
+
+/* ========================================
+  ヘッダー
+======================================== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 1000;
+  border-bottom: 1px solid #eee;
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.header-logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+}
+.gnav-list {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+.gnav-item a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+/* ======================================== 
+メインビジュアル
+ ======================================== */ 
+.mv {
+   margin-top: 80px; 
+  
+  } 
+  .mv-container img { 
+    width: 100%; 
+    height: auto; 
+    margin-bottom:50px;
+ position: relative;
+  z-index: 2;
+  }
+
+
+/* ========================================
+  WORKS セクション
+======================================== */
+.title {
+  font-size: 3rem;
+  margin-bottom:50px;
+  text-align: center;
+}
+.works-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2列並びに */
+  gap: 50px; /* 各アイテムの間隔 */
+  padding: 30px 20px; /* 余白調整 */
+  justify-items: center
+}
+.works-item {
+  position: relative;
+  overflow: hidden;
+  /* 既存の設定を残す */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+  width: 400%;
+  max-width: 600px;
+  transition: transform 0.3s ease; /* 全体の動き */
+}
+/* 画像を包む wrapper を準備 */
+.works-img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden; /* 画像のはみ出し防止 */
+}
+.works-img img {
+  width: 400%;
+  max-width: 900px;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+   transition: transform 0.5s ease, filter 0.5s ease;
+  transform-origin: center center;
+  z-index: 2;
+}
+.works-name {
+  font-weight: bold;
+  margin-top: 10px;
+}
+.works-info {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* ホバー時の動作 */
+.works-item:hover img {
+  transform: scale(1.1);
+  filter: brightness(0.8);
+}
+
+
+/* ========================================
+  SKILL セクション
+======================================== */
+.skill.section {
+  padding: 80px 20px;
+  background-color: #f9f9f9;
+  
+}
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.skill-item {
+  flex: 1 1 30%;
+  background: #fff;
+  border: 1px solid #eee;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  
+}
+.skill-img img {
+  display: block;
+  margin: 0 auto 10px; /* 下マージンは今まで通り */
+  width: 150px;
+  margin-bottom: 10px;
+}
+.skill-name {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.skill-text {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* ========================================
+  ABOUT セクション
+======================================== */
+.about.section {
+  padding: 80px 20px;
+}
+.profile {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+}
+.profile-img img {
+  width: 150px;
+  border-radius: 50%;
+  z-index: 2;
+}
+.profile-body {
+  flex: 1;
+  font-size: 1rem;
+}
+
+/* ========================================
+  CONTACT セクション
+======================================== */
+.contact.section {
+  padding: 80px 20px;
+  text-align: center;
+}
+.contact-list img {
+  width: 40px;
+}
+
+/* ========================================
+  ページトップボタン
+======================================== */
+.page-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background: #333;
+  color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000;
+}
+.page-top:hover {
+  background: #555;
+}
+.material-icons-outlined {
+  font-size: 24px;
+}
+
+/* ========================================
+  フッター
+======================================== */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #eee;
+  font-size: 0.9rem;
+  color: #666;
+}

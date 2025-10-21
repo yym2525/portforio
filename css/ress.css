@@ -1,0 +1,54 @@
+@media screen and (max-width: 768px) {
+  /* ヘッダー */
+  .header .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .gnav-list {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* WORKS セクション */
+  .works-list {
+    grid-template-columns: 1fr;
+  }
+  .works-img img {
+    width: 100%;
+  }
+
+  /* SKILL セクション */
+  .skill-list {
+    flex-direction: column;
+  }
+  .skill-item {
+    flex: 1 1 100%;
+  }
+
+  /* ABOUT セクション */
+  .profile {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* CONTACT */
+  .contact-list img {
+    width: 32px;
+  }
+
+  /* サイドスクロール */
+  .side-scroll-item {
+    min-width: 100%;
+    padding: 10px;
+  }
+
+  /* フォントや余白調整 */
+  .title {
+    font-size: 1.5rem;
+  }
+  .skill-text,
+  .works-info,
+  .profile-body {
+    font-size: 0.9rem;
+  }
+}
