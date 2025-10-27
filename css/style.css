@@ -54,7 +54,7 @@ img {
   padding: 20px;
 }
 .header-logo a {
-  font-size: 1.5rem;
+  font-size: 3rem;
   font-weight: bold;
   color: #333;
   text-decoration: none;
@@ -67,7 +67,7 @@ img {
 .gnav-item a {
   text-decoration: none;
   color: #333;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 /* ======================================== 
@@ -90,7 +90,7 @@ img {
   WORKS セクション
 ======================================== */
 .title {
-  font-size: 3rem;
+  font-size: 5rem;
   margin-bottom:50px;
   text-align: center;
 }
@@ -134,11 +134,12 @@ img {
   z-index: 2;
 }
 .works-name {
+  font-size: 2rem;
   font-weight: bold;
   margin-top: 10px;
 }
 .works-info {
-  font-size: 0.9rem;
+  font-size: 1.0rem;
   color: #666;
 }
 
@@ -178,11 +179,12 @@ img {
   margin-bottom: 10px;
 }
 .skill-name {
+  font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 10px;
 }
 .skill-text {
-  font-size: 0.9rem;
+  font-size: 1.0rem;
   color: #555;
 }
 
@@ -205,7 +207,7 @@ img {
 }
 .profile-body {
   flex: 1;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 /* ========================================
@@ -245,6 +247,10 @@ img {
   box-sizing: border-box;
 }
 
+#contact dt label {
+  font-size: 1.2rem;  /* ラベルの文字サイズ */
+}
+
 #contact dd {
   width: 86%;            /* 入力欄を広く確保 */
   box-sizing: border-box;
@@ -267,6 +273,7 @@ img {
   width: 200px;
   background-color: #24292e;
   color: #fff;
+  font-size: 1.1rem;
   padding: 15px 0;
   border: solid 1px #24292e;
   cursor: pointer;
@@ -324,6 +331,28 @@ img {
   text-align: center;
   padding: 20px;
   background: #eee;
-  font-size: 0.9rem;
+  font-size: 1.5rem;
   color: #666;
+}
+
+
+/* ========================================
+  works-2.html 用（メインコンテンツ中央寄せ）
+======================================== */
+
+.article-body img {
+  width: 100%;       /* 横幅いっぱいに */
+  max-width: 100%;   /* 最大幅制限解除 */
+  margin: 50px 0;    /* 上下の余白 */
+  display: block;
+}
+
+/* ページ全体の文字を少し大きく */
+body {
+  font-size: 18px; /* 既存のサイズより少し大きくする。デフォルトは16px */
+  line-height: 1.7; /* 行間も少し広くして読みやすく */
+}
+
+.footer {
+  padding: 50px 20px;  /* フッターの上下余白 */
 }
