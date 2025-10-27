@@ -219,7 +219,7 @@ img {
 
 #contact {
   width: 100%;
-  max-width: 1400px; /* 広めに設定して大画面でも伸びる */
+  max-width: 1500px; /* 広めに設定して大画面でも伸びる */
   margin: 0 auto;
 }
 
