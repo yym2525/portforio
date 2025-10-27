@@ -118,12 +118,13 @@ img {
 /* 画像を包む wrapper を準備 */
 .works-img {
   width: 100%;
+  max-width: 600px;
   display: flex;
   justify-content: center;
   overflow: hidden; /* 画像のはみ出し防止 */
 }
 .works-img img {
-  width: 400%;
+  width: 100%;
   max-width: 900px;
   height: auto;
   border: 1px solid #ddd;
@@ -211,12 +212,89 @@ img {
   CONTACT セクション
 ======================================== */
 .contact.section {
-  padding: 80px 20px;
+  padding: 80px 4%; /* 左右の余白をさらに少なく */
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+#contact {
+  width: 100%;
+  max-width: 1400px; /* 広めに設定して大画面でも伸びる */
+  margin: 0 auto;
+}
+
+/* dlを整列 */
+#contact dl {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+/* ラベルと入力欄を横並び */
+#contact dt,
+#contact dd {
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 20px;
+}
+
+#contact dt {
+  width: 12%;            /* ラベルをコンパクトに左側へ */
+  text-align: left;      /* ← 左寄せに変更 */
+  font-weight: bold;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+
+#contact dd {
+  width: 86%;            /* 入力欄を広く確保 */
+  box-sizing: border-box;
+}
+
+#contact dd input,
+#contact dd textarea {
+  width: 100%;
+  border: 1px solid #c8c8c8;
+  padding: 12px
+}
+/* ボタンを中央に配置 */
+#contact .button {
   text-align: center;
+  width: 100%;
+  margin-top: 40px;
 }
-.contact-list img {
-  width: 40px;
+
+#contact .button input {
+  width: 200px;
+  background-color: #24292e;
+  color: #fff;
+  padding: 15px 0;
+  border: solid 1px #24292e;
+  cursor: pointer;
+  transition: 0.3s;
 }
+
+#contact .button input:hover {
+  background: #fff;
+  color: #24292e;
+}
+
+/* スマホ対応 */
+@media (max-width: 768px) {
+  #contact dt,
+  #contact dd {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding-right: 0;
+  }
+  #contact dt {
+    margin-bottom: 5px;
+  }
+.works-list {
+    grid-template-columns: 1fr; /* 1列表示 */
+  }
+}
+
 
 /* ========================================
   ページトップボタン
