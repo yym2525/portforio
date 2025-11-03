@@ -19,3 +19,25 @@ $(function () {
   });
 });
 
+// ===============================
+// ホバーで中央拡大（オーバーレイ）
+// ===============================
+document.addEventListener('DOMContentLoaded', () => {
+  const thumbs = document.querySelectorAll('.zoom');
+  const overlay = document.getElementById('overlay');
+  const overlayImg = overlay.querySelector('img');
+
+  thumbs.forEach(img => {
+    img.addEventListener('click', () => {
+      overlayImg.src = img.src;
+      overlay.style.display = 'flex';
+    });
+  });
+
+  // オーバーレイクリックで閉じる
+  overlay.addEventListener('click', () => {
+    overlay.style.display = 'none';
+    overlayImg.src = ''; // 空にしておくと切り替え時にちらつき防止
+  });
+});
+

@@ -111,7 +111,7 @@ img {
   text-align: center;
   text-decoration: none;
   color: #333;
-  width: 400%;
+  width: 100%;
   max-width: 600px;
   transition: transform 0.3s ease; /* 全体の動き */
 }
@@ -149,6 +149,77 @@ img {
   filter: brightness(0.8);
 }
 
+/* ===============================
+   画像ホバー拡大（中央表示）
+=============================== */
+/* タイトル中央寄せ */
+.works-title-B {
+  text-align: center;      /* 中央揃え */
+  margin-bottom: 20px;     /* 画像との間隔 */
+}
+
+/* 横並び配置 */
+.image-row {
+  width: auto;
+  height: auto;
+  max-width: 100%; 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;  /* 横方向中央揃え */
+  align-items: flex-start;  /* 高さ揃え */
+  gap: 20px;
+  margin: 60px auto;
+  text-align: center;       /* 中央寄せの補助 */
+  flex-shrink: 0; 
+}
+
+/* 通常画像 */
+img.zoom {
+  width: 220px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex-shrink: 0;           /* 縮まない */
+}
+
+/* 横長バナー用 */
+.image-row img.banner {
+  width: auto;
+  height: auto;
+  max-width: 100%;           /* 横幅制限 */
+  display: inline-block;     /* inline-block で中央寄せしやすく */
+  margin: 0 auto;            /* 中央寄せ */
+  flex-shrink: 0;            /* 縮まらない */
+}
+/* オーバーレイ全体 */
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#overlay img {
+  width: auto;          /* 横幅は自動 */
+  height: auto;         /* 高さも自動 */
+  max-width: 90vw;      /* 画面幅の90%以内 */
+  max-height: 90vh;     /* 画面高さの90%以内 */
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.6);
+}
+
+
+/* フェードイン効果 */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 
 /* ========================================
   SKILL セクション
